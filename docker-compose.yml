@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  # Banco de Dados PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: helpdesk_postgres
+    environment:
+      POSTGRES_USER: helpdesk_user
+      POSTGRES_PASSWORD: helpdesk_pass
+      POSTGRES_DB: helpdesk_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - helpdesk_network
+
+  # Backend FastAPI
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: helpdesk_backend
+    environment:
+      DATABASE_URL: postgresql://helpdesk_user:helpdesk_pass@postgres:5432/helpdesk_db
+      SECRET_KEY: your-secret-key-here-change-in-production
+      ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 30
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    volumes:
+      - ./backend:/app
+    networks:
+      - helpdesk_network
+    command: sh -c "
+      pip install -r requirements.txt &&
+      python -c 'from app.db.init_db import create_tables, init_db; from app.db.database import SessionLocal; create_tables(); db = SessionLocal(); init_db(db); db.close()' &&
+      uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+      "
+
+  # Frontend React
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: helpdesk_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - helpdesk_network
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "npm install && npm start"
+
+volumes:
+  postgres_data:
+
+networks:
+  helpdesk_network:
+    driver: bridge
