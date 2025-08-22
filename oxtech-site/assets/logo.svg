@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .bg{fill:#0b0d10}
+      .ring{fill:none;stroke:#ffffff;stroke-width:18;opacity:.98}
+      .ring2{fill:none;stroke:#ffffff;stroke-width:8;opacity:.98}
+      .text{fill:#ffffff;font-family:Inter,Segoe UI,Arial,sans-serif;font-weight:800}
+    </style>
+  </defs>
+  <rect class="bg" width="512" height="512" rx="256"/>
+  <circle class="ring" cx="256" cy="256" r="228"/>
+  <circle class="ring2" cx="256" cy="256" r="210"/>
+  <g transform="translate(0,10)">
+    <g transform="translate(76,0)">
+      <circle fill="#0b0d10" cx="120" cy="250" r="64"/>
+      <circle fill="none" stroke="#ffffff" stroke-width="20" cx="120" cy="250" r="56"/>
+      <path fill="none" stroke="#ffffff" stroke-width="14" d="M72 226c12-20 31-32 48-32"/>
+    </g>
+    <text class="text" x="210" y="270" font-size="120" letter-spacing="2">xtech</text>
+  </g>
+</svg>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d10">
+  <title>Oxtech | Tecnologia e Soluções</title>
+  <meta name="description" content="Site institucional estilo POSSE com integração ao Instagram e Facebook.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+  <div id="fb-root"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="Oxtech - Início">
+        <img src="assets/logo.svg" alt="Logo Oxtech" class="brand-logo" onerror="this.src='assets/logo.png'">
+        <span class="brand-text">Oxtech</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#social">Social</a>
+        <a href="#contato" class="btn btn-primary">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-badge">Tecnologia • Design • Estratégia</div>
+        <h1 class="hero-title">Soluções digitais modernas para a sua marca</h1>
+        <p class="hero-subtitle">Sites, branding e presença social com performance e estilo.
+        </p>
+        <div class="cta-group">
+          <a href="#contato" class="btn btn-primary">Fale conosco</a>
+          <a href="#portfolio" class="btn btn-outline">Ver portfólio</a>
+        </div>
+      </div>
+      <div class="hero-ring" aria-hidden="true"></div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Quem somos</h2>
+          <p>
+            A <strong>Oxtech</strong> entrega experiências digitais com foco em resultado. Unimos design
+            minimalista, desenvolvimento eficiente e integrações com redes sociais para ampliar o alcance da sua marca.
+          </p>
+          <ul class="checks">
+            <li>Sites e landing pages responsivas</li>
+            <li>Identidade visual e direção de arte</li>
+            <li>Gestão e integrações com Instagram e Facebook</li>
+          </ul>
+        </div>
+        <div class="card highlight">
+          <h3>Nosso diferencial</h3>
+          <p>Estética forte, performance real e conteúdo conectado ao seu público.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section section-alt">
+      <div class="container">
+        <h2>Serviços</h2>
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>Sites & Lojas</h3>
+            <p>Projetos rápidos, acessíveis e prontos para escalar.</p>
+          </article>
+          <article class="card">
+            <h3>Branding</h3>
+            <p>Logo, paleta, tipografia e guias para sua comunicação.</p>
+          </article>
+          <article class="card">
+            <h3>Social Media</h3>
+            <p>Integrações, embeeds e automações para Instagram e Facebook.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="container">
+        <h2>Portfólio</h2>
+        <div class="grid gallery">
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="social" class="section section-alt">
+      <div class="container two-col">
+        <div>
+          <h2>Instagram</h2>
+          <p>Substitua a URL abaixo pelo link de um post ou reel do seu perfil.</p>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C9g1FJ0u000/" data-instgrm-version="14" style=" background:#000; border:0; margin: 0; max-width:540px; width:100%;"></blockquote>
+        </div>
+        <div>
+          <h2>Facebook</h2>
+          <p>Exemplo usando a Page Plugin. Substitua o link da página.</p>
+          <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="500" data-height="520" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Contato</h2>
+          <p>Vamos conversar sobre o seu projeto? Envie uma mensagem.</p>
+          <ul class="contact-list">
+            <li><a href="mailto:contato@oxtech.example">contato@oxtech.example</a></li>
+            <li><a target="_blank" rel="noopener" href="https://instagram.com/">Instagram</a></li>
+            <li><a target="_blank" rel="noopener" href="https://facebook.com/">Facebook</a></li>
+          </ul>
+        </div>
+        <form class="card form" action="https://formspree.io/f/your-id" method="POST">
+          <label>
+            Nome
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Mensagem
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Enviar</button>
+          <p class="form-note">Sem backend: substitua o action por seu endpoint (ex. Formspree).</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="Logo Oxtech" onerror="this.src='assets/logo.png'">
+        <span>© <span id="year"></span> Oxtech. Todos os direitos reservados.</span>
+      </div>
+      <div class="social-links">
+        <a target="_blank" rel="noopener" href="https://instagram.com/" aria-label="Instagram">Instagram</a>
+        <a target="_blank" rel="noopener" href="https://facebook.com/" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v20.0"></script>
+</body>
+</html>
